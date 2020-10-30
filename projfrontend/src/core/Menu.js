@@ -6,16 +6,16 @@ import { signout , isAuthenticated } from '../auth/helper';
 
 const currentTab = (history, path) => {
     if(history.location.pathname === path) {
-        return {color: "#2ecc72"};
+        return {color: "#00EDF9"};
     } else {
-        return { color: "#FFFFFF"};
+        return { color: "#000000"};
     }
 }
 
 const Menu = ({history, path}) => {
     return (
         <div>
-            <ul className ="nav nav-tabs bg-dark">
+            <ul className ="nav nav-tabs bg-light">
                 <li className ="nav-item">
                     <Link 
                         style={currentTab(history, "/")} 
@@ -23,6 +23,51 @@ const Menu = ({history, path}) => {
                         to  = "/"
                     >
                         Home
+                    </Link>
+                </li>
+                <li className ="nav-item">
+                    <Link 
+                        style={currentTab(history, "/discover")} 
+                        className ="nav-link" 
+                        to  = "/discover"
+                    >
+                        Discover
+                    </Link>
+                </li>
+                <li className ="nav-item">
+                    <Link 
+                        style={currentTab(history, "/winter")} 
+                        className ="nav-link" 
+                        to  = "/winter"
+                    >
+                        Winter
+                    </Link>
+                </li>
+                <li className ="nav-item">
+                    <Link 
+                        style={currentTab(history, "/summer")} 
+                        className ="nav-link" 
+                        to  = "/summer"
+                    >
+                        Summer
+                    </Link>
+                </li>
+                <li className ="nav-item">
+                    <Link 
+                        style={currentTab(history, "/sell")} 
+                        className ="nav-link" 
+                        to  = "/sell"
+                    >
+                        Sell
+                    </Link>
+                </li>
+                <li className ="nav-item">
+                    <Link 
+                        style={currentTab(history, "/support")} 
+                        className ="nav-link" 
+                        to  = "/support"
+                    >
+                        Support
                     </Link>
                 </li>
                 <li className ="nav-item">
@@ -45,24 +90,25 @@ const Menu = ({history, path}) => {
                     </Link>
                 </li>
                 )}
+                
                 {!isAuthenticated() && (
                     <Fragment>
                             <li className ="nav-item">
-                        <Link 
-                            style={currentTab(history, "/signup")} 
-                            className ="nav-link" 
-                            to  = "/signup"
-                        >
-                            Signup
-                        </Link>
-                    </li>
-                    <li className ="nav-item">
                         <Link 
                             style={currentTab(history, "/signin")} 
                             className ="nav-link" 
                             to  = "/signin"
                         >
-                            Signin
+                            <button type="button" class="btn btn-primary">Login</button>
+                        </Link>
+                    </li>
+                    <li className ="nav-item">
+                        <Link 
+                            style={currentTab(history, "/signup")} 
+                            className ="nav-link" 
+                            to  = "/signup"
+                        >
+                            <button type="button" class="btn btn-primary">Signup</button>
                         </Link>
                     </li>
                     </Fragment>

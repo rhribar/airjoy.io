@@ -36,9 +36,9 @@ export default function Home() {
 
     //looping through products
     return (
-      <Base title = "Home Page" description = "Welcome to T-shirt store">
+      <Base title = "Enjoy your day. We provide the fun!"description = "">
           <h1>Home Component</h1>
-          <div className = "row">
+          <div className = "row">   
             {products.map( (product, index) => {
               return(
                 <div key = {index} className = "col-4 mb-4">
