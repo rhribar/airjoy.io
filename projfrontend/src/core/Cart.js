@@ -38,26 +38,6 @@ const Cart = () => {
             </div>
         );
     };
-   /* 
-    return (
-        <Base title = "Cart page" description = "Welcome to checkout">
-            <div className = "row text-center">
-                <div className = "col-6">
-                    {loadAllProducts(products)}
-                </div>
-                <div className = "col-6">
-                    {products.length > 0 ? 
-                    (
-                        <PaymentB products = {products} setReload />
-                    ) 
-                    : (
-                        <h3>Please login or add something in cart.</h3>
-                    )}
-                </div>
-            </div>
-        </Base>
-    );
-};*/
 
 return (
     <Base title="Cart page" description="Welcome to checkout">

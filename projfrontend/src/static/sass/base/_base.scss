@@ -1,0 +1,12 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+* {
+    font-size: 62.5%; /* since 100%/16 = 0.625 Allows for zoom in */
+    //defines what 1 rem is 
+}

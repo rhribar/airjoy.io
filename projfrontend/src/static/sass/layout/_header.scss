@@ -1,0 +1,29 @@
+/* .header {
+    height: 40vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.800),
+        rgba($color-primary-dark, 0.800)),
+        url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    font-size: 1.6rem;
+    z-index: -10;
+} */
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.2;
+    overflow: hidden;
+
+    &__content {
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

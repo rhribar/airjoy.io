@@ -1,0 +1,62 @@
+.navigation {
+    position: relative;
+    padding-top: 3.5rem;
+    display: flex;
+    font-family: "Lato", sans-serif;
+
+    &__logo-box {
+        position: absolute;
+        top: 1.5rem;
+        left: 3rem;
+    }
+
+    &__logo {
+        height: 5.5rem;
+    }
+
+    &__list {
+        list-style-type: none;
+        width: 100%;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        margin-right: 3rem;
+        font-size: 2rem;
+    }
+
+    &__cart {
+        font-size: 2rem;
+    }
+
+    &__buttons {
+        list-style-type: none;
+        width: 0%;
+        font-size: 2rem;
+        display: flex;
+        justify-content: flex-end;
+
+        &--blue {
+            background-color: $color-primary;
+            color: $color-white;
+            padding: 9px  23px 13px 23px;
+            border-radius: 10px;
+        }
+        
+        &--white {
+            color: $color-primary;
+            border: 2px solid $color-primary;
+            padding: 7px  21px 11px 21px;
+            border-radius: 10px;
+        }
+
+    }
+
+    &:hover, a:visited, a:link, a:active
+    {
+        text-decoration: none;
+    }
+
+}

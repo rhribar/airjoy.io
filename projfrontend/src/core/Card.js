@@ -4,7 +4,7 @@ import {Redirect} from "react-router-dom"
 import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
 import { isAuthenticated } from '../auth/helper';
 
-
+import "../static/sass/main.css";
 
 const Card = ({
     product,
@@ -12,8 +12,6 @@ const Card = ({
     removeFromCart = false,
     reload = undefined,
     setReload = f => f,
-  // function(f) return f
-
 
 }) => {
 
@@ -43,7 +41,6 @@ const Card = ({
             addtoCart && (
             <button
               onClick={addToCart}
-              className="btn btn-block btn-outline-success mt-2 mb-2"
             >
               Add to Cart
             </button>
@@ -71,22 +68,23 @@ const Card = ({
 
 
     return (
-      <div className="card text-white bg-dark border border-info ">
-        <div className="card-header lead">{cartTitle}</div>
-        <div className="card-body">
+      <div class="card">
+        <div className="card__body">
           {getAredirect(redirect)}
           <ImageHelper product = {product}/>
-          <p className="lead bg-success font-weight-normal text-wrap">
+          <div className="card__header">{cartTitle}</div>
+          <p class="card__description">
             {cartDescription}
           </p>
-          <p className="btn btn-success rounded  btn-sm px-4">$ {cartPrice}</p>
-          <div className="row">
-            <div className="col-12">
+          <p class="card__price">$ {cartPrice}</p>
+          <div>
+          See details
+            {/* <div className="col-12">
               {showAddToCart(addToCart)}
             </div>
             <div className="col-12">
              {showRemoveFromCart(removeFromCart)}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -3,8 +3,11 @@ import Base from './Base';
 
 import {getProducts} from "./helper/coreapicalls";
 
-import"../styles.css";
 import Card from './Card';
+import Search from "./Search";
+
+import "../static/sass/main.css"
+
 
 export default function Home() {
 //set products managed by use state, not specified separatedly
@@ -24,11 +27,7 @@ export default function Home() {
           }
         });
     };
-/*
-    useEffect(() => {
-    
-      loadAllProducts();
-   }, []); */
+
 
     useEffect(loadAllProducts, [] )
 
@@ -36,76 +35,22 @@ export default function Home() {
 
     //looping through products
     return (
-      <Base title = "Enjoy your day. We provide the fun!"description = "">
-          <h1>Home Component</h1>
-          <div className = "row">   
+      <div className = "main">
+      <Base title = "Enjoy your day. We provide the fun!" description = "" class="title">
+        <Search></Search>
+        <div class="section-discover">
+          <h1 class="heading-primary">Discover</h1>
+          <div class = "row">   
             {products.map( (product, index) => {
               return(
-                <div key = {index} className = "col-4 mb-4">
+                <div key = {index} className = "col-1-of-3">
                   <Card product = {product} />
                 </div>
               );
             })} 
-        </div>
+          </div>
+          </div>
       </Base>
+      </div>
     );
 }
-
-/*
-import React, { useState, useEffect } from "react";
-
-import { getProducts } from "./helper/coreapicalls";
-
-
-
-export default function Home() {
-  const [products, setProducts] = useState([]);
-  const [error, setError] = useState(false);
-
-  const loadAllProducts = () => {
-    getProducts()
-      .then((data) => {
-        if (data.error) {
-          setError(data.error);
-          console.log(error);
-        } else {
-          setProducts(data);
-        }
-      });
-  };
-
-  useEffect(() => {
-    loadAllProducts();
-  }, []);
-
-  return (
-    <div className="row">
-      <h1>Home component</h1>
-        {products.map((product, index) => {
-          return (
-            <div key={index} className="col-4 mb-4">
-            </div>
-          );
-        })}
-      </div>
-  );
-}
-
-*/
-
-    /*const loadAllProducts = () => {
-        getProducts()
-          .then((data) => {
-            if (data.error) {
-              setError(data.error);
-              console.log(error);
-            } else {
-              setProducts(data);
-            }
-          });
-      };*/
-/*
-    useEffect(() => {
-        loadAllProducts(); // loads the products
-    }, []);
-*/
