@@ -1,7 +1,7 @@
 // regular stuff goes here
 import "../static/sass/main.css";
 
-import video from "../static/img/heading-video.mp4";
+
 
 import React from 'react'
 import Navigation from './Navigation';
@@ -16,10 +16,6 @@ const Base = ({
         <div>      
             <Navigation/>
             <div>
-                <div class="bg-video">
-                    <video class="bg-video__content" src={video} type="video/mp4" autoPlay={true} muted>
-                    </video>
-                </div>
                 <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"></link>
                 <div>
                     <h2 class="title">{title}</h2>

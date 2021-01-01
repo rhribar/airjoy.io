@@ -13,5 +13,4 @@ router.register(r'', views.ProductViewSet)
 urlpatterns = [
     path('search/', views.SearchAPIView.as_view()),
     path('', include(router.urls)),
-    
 ]

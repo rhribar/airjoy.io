@@ -16,10 +16,12 @@ const Card = ({
 }) => {
 
     const [redirect, setRedirect] = useState(false);
-
+    console.log(product)
     const cartTitle = product ? product.name : "A photo from pexels"
     const cartDescription = product ? product.description : "Default description"
     const cartPrice = product ? product.price : "Default"
+
+    
 
     const addToCart = () => {
         if(isAuthenticated()) {

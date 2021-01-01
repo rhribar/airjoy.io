@@ -1,0 +1,125 @@
+.product {
+    font-size: 3rem;
+    font-family: 'Lato';
+    display:inline;
+
+    &__image {
+        margin-top: 3rem;
+        margin-left: 2rem;
+        border-radius: 1rem;
+        width: 46%;
+        display:inline;
+    }
+
+    &__info {
+        display:inline;
+        width: 49%;
+        float:right;
+        margin-top: 2rem;
+        margin-right: 2rem;
+    }
+
+    &__heading {
+        font-size: 3rem;
+
+        &--name {
+            display:inline;
+            margin-right: 10rem;
+            font-weight: 700;
+            font-size: 3rem;
+        }
+
+        &--location {
+            display:inline;
+            margin-right: 3.5rem;
+            
+            &>i {
+                font-size: 2.5rem;
+                padding-right: 1rem;
+                color: $color-primary;
+            }
+        }
+
+        &--peak {
+            display:inline;
+
+            &>i {
+                font-size: 2.5rem;
+                padding-right: 1rem;
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__ratings {
+        font-size: 3rem;
+
+        &--resort {
+            display:inline;
+            margin-right: 5.5rem;
+        }
+
+        &--family {
+            display:inline;
+            margin-right: 5.5rem;
+        }
+
+        &--scenery {
+            display:inline;
+        }
+    }
+   
+    &__slopes {
+        margin-left: auto;
+        & * i {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+        
+
+        font-size: 3rem;
+
+        &--easy {
+            display:inline;
+            & > i {
+                color: $color-tertiary-light;
+            }
+            margin-right: 7rem;
+
+        }
+
+        &--medium {
+            display:inline;
+            & > i {
+                color: rgb(248, 31, 31);
+            }
+            margin-right: 7rem;
+        }
+
+        &--hard {
+            display:inline;
+            margin-right: 7rem;
+        }
+
+        &--total {
+            display:inline;
+        }
+       
+    }
+
+    &__snow {
+        font-size: 3rem;
+    }
+
+    &__description {
+        font-size: 2rem;
+    }
+
+    &__price {
+        
+    }
+}
+
+.fas fa-map-marker-alt {
+    font-size: 10rem;
+}

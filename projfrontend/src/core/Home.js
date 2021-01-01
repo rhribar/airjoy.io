@@ -7,6 +7,7 @@ import Card from './Card';
 import Search from "./Search";
 
 import "../static/sass/main.css"
+import video from "../static/img/heading-video.mp4";
 
 
 export default function Home() {
@@ -33,15 +34,18 @@ export default function Home() {
 
 
 
-    //looping through products
+    // looping through products
     return (
       <div className = "main">
       <Base title = "Enjoy your day. We provide the fun!" description = "" class="title">
+      <div class="bg-video">
+        <video class="bg-video__content" src={video} type="video/mp4" autoPlay={true} muted></video>
+      </div>
         <Search></Search>
         <div class="section-discover">
           <h1 class="heading-primary">Discover</h1>
           <div class = "row">   
-            {products.map( (product, index) => {
+            {products.map((product, index) => {
               return(
                 <div key = {index} className = "col-1-of-3">
                   <Card product = {product} />
