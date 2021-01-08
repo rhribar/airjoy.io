@@ -9,6 +9,8 @@ import Search from "./Search";
 import "../static/sass/main.css"
 import video from "../static/img/heading-video.mp4";
 
+import Navigation from "./Navigation"
+
 
 export default function Home() {
 //set products managed by use state, not specified separatedly
@@ -37,6 +39,7 @@ export default function Home() {
     // looping through products
     return (
       <div className = "main">
+      <Navigation/>
       <Base title = "Enjoy your day. We provide the fun!" description = "" class="title">
       <div class="bg-video">
         <video class="bg-video__content" src={video} type="video/mp4" autoPlay={true} muted></video>

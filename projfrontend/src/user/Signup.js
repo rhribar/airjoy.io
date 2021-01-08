@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Base from "../core/Base";
 import {Link} from "react-router-dom";
 import {signup} from "../auth/helper"; // automatically picks index file
+import Navigation from '../core/Navigation';
 
 /* Creating signup component here. */
 
@@ -57,7 +58,7 @@ const Signup = () => {
 
     }
 
-    const successMessage = () => {
+    /* const successMessage = () => {
         return (
             <div className = "row">
                 <div className= "col-md-6 offset-sm-3 text-left">
@@ -86,44 +87,56 @@ const Signup = () => {
                 </div>
             </div>
         )
-    }
+    } */
 
 
     const signUpForm = () => {
         return(
-            <div className ="row">
-                <div className ="col-md-6 offset-sm-3 text-left">
-                    <form>
-                        <div className = "form-group">
-                            <label className ="text-light">Name</label>
+            <div className="signin">
+                <div className="signin__form">
+                    <form className="form">
+                        <div className="form__group">
+                            {/* <label className ="text-light">Name</label>
                             <input
                                 className ="form-control"
                                 value = {name}
                                 onChange = {handleChange("name")}
                                 type ="text"
-                            />
+                            /> */}
+                            <input type="text" className="form__input" value={name} onChange = {handleChange("name")} placeholder="Name" id="name" required></input>
+                            <label for="name" className="form__label">Name</label>
+
+                            {/* <input type="email" className="form__input" value={email} onChange={handleChange("email")} placeholder="Email address" id="email" required></input>
+                            <label for="email" className="form__label">Email Address</label> */}
                         </div>
-                        <div className = "form-group">
-                            <label className ="text-light">Email</label>
+                        <div className="form__group">
+{/*                             <label className ="text-light">Email</label>
                             <input
                                 className ="form-control"
                                 value = {email}
                                 onChange = {handleChange("email")}
                                 type ="text"
-                            />
+                            /> */}
+                            <input type="email" className="form__input" value={email} onChange={handleChange("email")} placeholder="Email address" id="email" required></input>
+                            <label for="email" className="form__label">Email Address</label>
                         </div>
-                        <div className = "form-group">
-                            <label className ="text-light">password</label>
+                        <div className="form__group">
+                            <input name="password" type="password" className="form__input" value={password} onChange={handleChange("password")} placeholder="Password" id="email" required></input>
+                            <label for="password" className="form__label">Password</label>
+
+                            {/* <label className ="text-light">password</label>
                             <input
                                 className ="form-control"
                                 value = {password}
                                 onChange = {handleChange("password")}
                                 type ="password"
-                            />
+                            /> */}
                         </div>
-                        <button 
-                        onClick = {onSubmit}
-                        className = "btn btn-success btn-block">Submit</button>
+                        <div className="signin__form__button"> 
+                            <button 
+                            onClick = {onSubmit}
+                            className="button navigation__buttons--blue button--page">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -132,14 +145,17 @@ const Signup = () => {
     }
 
     return (
-        <Base title = "Sign Up Page" description ="A signup for LCO user!">
-            {successMessage()}
-            {errorMessage()}
-            {signUpForm()}
-            <p className = "text-white text-center">
-           {JSON.stringify(values) }
-            </p>
-        </Base>
+        <div>
+            <Navigation/>
+            <Base title = "Welcome to registration page!" description ="">
+                {/* {successMessage()}
+                {errorMessage()} */}
+                {signUpForm()}
+                <p className = "text-white text-center">
+            {JSON.stringify(values) }
+                </p>
+            </Base>
+        </div>
     );
 };
 

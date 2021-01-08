@@ -4,7 +4,7 @@ import "../static/sass/main.css";
 
 
 import React from 'react'
-import Navigation from './Navigation';
+
 
 const Base = ({
     title = "My Title", //some basic values
@@ -14,7 +14,7 @@ const Base = ({
 }) => {
     return (// btrsp classes incoming
         <div>      
-            <Navigation/>
+            
             <div>
                 <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"></link>
                 <div>

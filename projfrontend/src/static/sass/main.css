@@ -7,7 +7,7 @@
           box-sizing: inherit;
 }
 
-* {
+html {
   font-size: 62.5%;
   /* since 100%/16 = 0.625 Allows for zoom in */
 }
@@ -108,6 +108,40 @@
   letter-spacing: 3px;
   -webkit-animation: moveInLeft 1.5s ease-out;
           animation: moveInLeft 1.5s ease-out;
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+  /* @include respond(tab-port) {
+        padding: 5rem !important;
+    } */
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+  /* @include respond(tab-port) {
+        padding: 3rem !important;
+    } */
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+
+.u-margin-top-small {
+  margin-top: 2rem !important;
 }
 
 .section-discover {
@@ -236,6 +270,25 @@
   font-size: 10rem;
 }
 
+.signin {
+  margin-top: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.signin__form__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .button, .button:link, .button:visited {
   text-decoration: none;
   font-size: 2rem;
@@ -252,6 +305,10 @@
 .button--blue {
   background-color: #00EDF9;
   margin-left: 3px;
+}
+
+.button--page {
+  padding: 4px 20px 8px !important;
 }
 
 .search {
@@ -369,6 +426,120 @@
   padding-left: 1rem;
   font-size: 1.75rem;
   color: red;
+}
+
+.form {
+  font-size: 2rem;
+  /*
+    &__radio-group {
+        width: 48%;
+        white-space: normal;
+        display: inline-block;
+
+         @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 1rem;
+        } 
+    }
+
+     &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        font-size: $default-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+    } 
+
+    &__radio-button {
+        height: 3rem;
+        width: 3rem;
+        border: 3px solid $color-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -0.3rem;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 47%;
+            transform: translate(-50%, -50%);
+            background-color: $color-primary;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
+    } */
+}
+
+.form__group:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.form__input {
+  width: 300px;
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: 0.75px solid #999;
+  /*         @include respond(tab-port) {
+            width: 100%;
+        } */
+}
+
+.form__input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #00EDF9;
+}
+
+.form__input:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: #999;
+}
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
 }
 
 /* @import "components/_form.scss";

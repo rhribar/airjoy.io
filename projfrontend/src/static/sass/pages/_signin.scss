@@ -1,0 +1,13 @@
+.signin {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+
+
+    &__form {
+        &__button {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

@@ -6,7 +6,7 @@
     box-sizing: inherit;
 }
 
-* {
+html {
     font-size: 62.5%; /* since 100%/16 = 0.625 Allows for zoom in */
     //defines what 1 rem is 
-}
+} 
