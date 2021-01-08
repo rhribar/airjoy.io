@@ -2,8 +2,20 @@ from django.db import models
 from api.category.models import Category 
 
 # Create your models here.
+""" STRUCTURE THIS AS APIS ARE STRUCTURED
+    SMTH LIKE
+    DATA:
+        1.
+        2.
+        3.
+        IMAGES
+            IMG LARGE
+            IMG SMALL
+"""
 
 class Product(models.Model):
+
+    # BASIC INFO ABOUT RESORT
     name = models.CharField(max_length =50)
     activity = models.CharField(max_length = 50, default='')
     category = models.ForeignKey(Category, on_delete = models.SET_NULL, blank = True, null = True)
