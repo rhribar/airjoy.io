@@ -1,7 +1,7 @@
 import React from 'react'
 import Base from '../core/Base'
 
-
+/* Creating the user dashboard here. */
 const UserDashboard = () => {
     return (
         <Base title = "User dashboard">

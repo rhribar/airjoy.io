@@ -40,7 +40,7 @@ const Routes = (
     useEffect(loadAllProducts, [] );
 
 
-
+    /* Creating the product routes dynamically. */
     return(
         <Router>
             <Switch>

@@ -3,6 +3,8 @@ import {Route, Redirect} from "react-router-dom";
 
 import { isAuthenticated } from "./index";
 
+/* Handle private routes here. */
+
 const PrivateRoutes = ({component: Component, ...rest }) => {
     return (
         <Route

@@ -3,6 +3,8 @@ import Base from "../core/Base";
 import {Link} from "react-router-dom";
 import {signup} from "../auth/helper"; // automatically picks index file
 
+/* Creating signup component here. */
+
 const Signup = () => {
 
     // template for signup
