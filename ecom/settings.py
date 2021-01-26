@@ -164,3 +164,8 @@ CORS_ORIGIN_REGEX_WHITELIST = [
     'http://localhost:3000',
 ]"""
 
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
