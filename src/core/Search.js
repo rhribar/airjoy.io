@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Suggestions from "./Suggestions"
 import "../static/sass/main.css"
+import { API } from "../backend.js";
 
 class Search extends Component {
     state = {
@@ -9,7 +10,7 @@ class Search extends Component {
         results: []
     }
     getQuery = () => {
-        axios.get(`http://127.0.0.1:8000/api/product/search/?search=${this.state.query}`)
+        axios.get(`${API}product/search/?search=${this.state.query}`)
         .then(res => {
             this.setState({
                 results: res.data,  

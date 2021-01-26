@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1194c800.chunk.css",
+    "main.js": "/static/js/main.1d17481b.chunk.js",
+    "main.js.map": "/static/js/main.1d17481b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.dc49cf19.js",
+    "runtime-main.js.map": "/static/js/runtime-main.dc49cf19.js.map",
+    "static/js/2.bf318939.chunk.js": "/static/js/2.bf318939.chunk.js",
+    "static/js/2.bf318939.chunk.js.map": "/static/js/2.bf318939.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2e3c7fbd537f00fea70410ddc92b5c45.js": "/precache-manifest.2e3c7fbd537f00fea70410ddc92b5c45.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.1194c800.chunk.css.map": "/static/css/main.1194c800.chunk.css.map",
+    "static/js/2.bf318939.chunk.js.LICENSE.txt": "/static/js/2.bf318939.chunk.js.LICENSE.txt",
+    "static/media/flaticon.css": "/static/media/Flaticon.e089faa7.woff2",
+    "static/media/coming-soon.png": "/static/media/coming-soon.663ce55d.png",
+    "static/media/heading-video.mp4": "/static/media/heading-video.0747b35f.mp4",
+    "static/media/kronplatz-prices.png": "/static/media/kronplatz-prices.a8ca9c09.png",
+    "static/media/logo-1x.png": "/static/media/logo-1x.6d7e667d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dc49cf19.js",
+    "static/js/2.bf318939.chunk.js",
+    "static/css/main.1194c800.chunk.css",
+    "static/js/main.1d17481b.chunk.js"
+  ]
+}
