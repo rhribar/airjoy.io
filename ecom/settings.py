@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
+""" import django_heroku
 
-django_heroku.settings(locals())
+django_heroku.settings(locals()) """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -95,11 +95,21 @@ WSGI_APPLICATION = 'ecom.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'd1hd841a7864lp',
+        'HOST': 'ec2-54-172-219-218.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'gcxhgucppxqbvd',
+        'PASSWORD': '2612f80d0f1026606a328079363cf857d81f6b812482a7f1c3c7bdd5ecec2c0f' 
     }
 }
 
-
+""" DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+ """
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
