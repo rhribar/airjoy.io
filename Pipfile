@@ -11,6 +11,9 @@ django-cors-headers = "*"
 djangorestframework = "*"
 pillow = "*"
 braintree = "*"
+gunicorn = "*"
+django-heroku = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.8"
