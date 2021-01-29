@@ -29,6 +29,7 @@ class Product(models.Model):
     price = models.CharField(max_length = 50)
     stock = models.CharField(max_length = 50)
     image = models.ImageField(upload_to = 'images/', blank = True, null = True)
+    price_table = models.ImageField(upload_to = 'images/', blank = True, null = True)
 
     # IN-DEPTH INFO ABOUT RESORT
     slopes_easy = models.DecimalField(max_digits=4, decimal_places=1, default=0.0)
