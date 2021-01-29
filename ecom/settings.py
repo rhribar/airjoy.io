@@ -94,7 +94,7 @@ WSGI_APPLICATION = 'ecom.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'd1hd841a7864lp',
         'HOST': 'ec2-54-172-219-218.compute-1.amazonaws.com',
         'PORT': 5432,
