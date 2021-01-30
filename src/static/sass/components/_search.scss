@@ -4,8 +4,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-bottom: 15rem;
-
+    /* margin-bottom: 15rem; */
+    padding-bottom: 10rem;
+    
     &__box {
         width: 60rem;
         position: relative;
@@ -15,8 +16,8 @@
         font-size: 2rem;
         width: 100%;
         padding: 2rem;
-        margin-top: 5rem;
-        margin-bottom: 7rem;
+        /* margin-top: 5rem;
+        margin-bottom: 7rem; */
         border-radius: 1.4rem;
         color: $color-grey-dark-3;
 
@@ -25,7 +26,7 @@
         animation-timing-function: ease-out;
 
         outline: none;
-        border: 1px solid black;
+        border: 0.5px solid #333344;
 
         &::placeholder {
             color: $color-grey-dark-4;
@@ -35,7 +36,7 @@
     &__icon{ 
         position: absolute; 
         left: 60rem; 
-        top: 7.5rem; 
+        top: 2.5rem; 
         color: black; 
         font-size: 2.3rem;
     } 

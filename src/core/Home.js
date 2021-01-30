@@ -7,7 +7,9 @@ import Card from './Card';
 import Search from "./Search";
 
 import "../static/sass/main.css"
-import video from "../static/img/heading-video.mp4";
+/* import video from "../static/img/heading-video.mp4"; */
+/* import img from "../static/img/homepage.jpg"; */
+import Footer from "./Footer.js"
 
 import Navigation from "./Navigation"
 
@@ -39,25 +41,34 @@ export default function Home() {
     // looping through products
     return (
       <div className = "main">
-      <Navigation/>
-      <Base title = "Enjoy your day. We provide the fun!" description = "" class="title">
-      <div class="bg-video">
-        <video class="bg-video__content" src={video} type="video/mp4" autoPlay={true} muted></video>
-      </div>
+      <Navigation></Navigation>
+      {/* <div className="image">
+        <img className="image__content" src={img}></img>
+      </div> */}
+      <div className="header-img">
+      <Base title = "Enjoy your day. We provide the fun!" description = "" className="title"></Base>
+      {/* <div className="image">
+        <img className="image__content" src={img}></img>
+      </div> */}
+      {/* <div className="bg-video">
+        <video className="bg-video__content" src={video} type="video/mp4" autoPlay={true} muted></video>
+      </div> */}
+
         <Search></Search>
-        <div class="section-discover">
-          <h1 class="heading-primary">Discover</h1>
-          <div class = "row">   
+        </div>
+        <div className="section-discover">
+          <h1 className="heading-primary">Discover</h1>
+          <div className = "row">   
             {products.map((product, index) => {
               return(
                 <div key = {index} className = "col-1-of-3">
-                  <Card product = {product} />
+                  <Card product = {product}/>
                 </div>
               );
             })} 
           </div>
           </div>
-      </Base>
+      <Footer/>
       </div>
     );
 }

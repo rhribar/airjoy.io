@@ -2,3 +2,12 @@
     background-color: $color-white;
     padding-top: 2.5rem;
 }
+
+.header-img {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(#fff, 0.30),
+        rgba(#fff, 0.30)), 
+        url('../img/homepage.jpg');
+    background-size: cover;
+}
