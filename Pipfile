@@ -14,6 +14,8 @@ braintree = "*"
 gunicorn = "*"
 django-heroku = "*"
 psycopg2 = "*"
+django-storages = "*"
+boto3 = "*"
 
 [requires]
 python_version = "3.8"
