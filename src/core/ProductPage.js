@@ -148,7 +148,7 @@ const ProductPage = ({
 
             </div>
          
-            {products.map(product1 => <Route exact path={`/${product1.name}`} component={Signup} /> )}  
+            {products.map(product1 => <Route exact path={`/${product1.name}`}/> )}  
         </div> 
     )
 };
