@@ -1,6 +1,8 @@
 .section-discover {
-    background-color: $color-white;
-    padding-top: 2.5rem;
+    /* background-color: $color-white; */
+    padding-top: 5rem;
+    /* max-width: 192rem; */
+    
 }
 
 .header-img {
@@ -10,4 +12,12 @@
         rgba(#fff, 0.30)), 
         url('../img/homepage.jpg');
     background-size: cover;
+}
+
+.card-wrapper {
+    /* max-width: 100rem!important; */
+    display: flex;
+    justify-content: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
 }

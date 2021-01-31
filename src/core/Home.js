@@ -56,19 +56,20 @@ export default function Home() {
 
         <Search></Search>
         </div>
-        <div className="section-discover">
-          <h1 className="heading-primary">Discover</h1>
-          <div className = "row">   
-            {products.map((product, index) => {
-              return(
-                <div key = {index} className = "col-1-of-3">
-                  <Card product = {product}/>
-                </div>
-              );
-            })} 
+
+          <div className="section-discover">
+            <h1 className="heading-primary">Discover</h1>
+            <div className = "row card-wrapper">   
+              {products.map((product, index) => {
+                return(
+                  <div key = {index} className = "col-1-of-3">
+                    <Card product = {product}/>
+                  </div>
+                );
+              })} 
+            </div>
           </div>
-          </div>
-      <Footer/>
+      {/* <Footer/> */}
       </div>
     );
 }

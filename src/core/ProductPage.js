@@ -16,6 +16,7 @@ import soon from '../static/img/coming-soon.png'
 const ProductPage = ({
     product,
 }) => {
+    // loading all the products from api into state
     const [products, setProducts] = useState([]); 
     const [error, setError] = useState(false);
     
@@ -30,33 +31,29 @@ const ProductPage = ({
             }
           });
     };
-    
+
     var product = "";
-    var productName = "Plan de Corones";
+    var productUrl = "";
+    var pageUrl = window.location.pathname;
     for(var i = 0; i < products.length; i++) {
-        if(products[i].name == productName ) {
+        var productUrl = `/${products[i].product_url}`;
+        console.log(productUrl);
+        if(productUrl == pageUrl) {
             product = products[i];
         }
     }
-    for(var i = 0; i < products.length; i++) {
-        console.log(products[i].prod);
-    }
-    console.log(products);
 
     useEffect(loadAllProducts, [] )
-    
-/*     const cartTitle = product ? product.name : "A photo from pexels"
-    const cartDescription = product ? product.description : "Default description"
-    const cartPrice = product ? product.price : "Default" */
+
+
     return (
         <div>
             <Navigation/>
-            
             <div class="product">
-                
                 <div class="product__header">
-                    {/* <span className={locationFonts['flaticon-location']}></span> */}
+                    {console.log(product)}
                     <img src = {product.image} class= "product__image" alt={`${product.name} mountain`} />
+                    
                     <div class="product__info">
                         <div class="product__heading">
                             <div class="product__heading--name">{product.name}</div>
@@ -150,14 +147,8 @@ const ProductPage = ({
                 </div>
 
             </div>
-
-
-
-
-            
-            {products.map(product1 =>
-                    <Route exact path={`/${product1.name}`} component={Signup} />
-            )}  
+         
+            {products.map(product1 => <Route exact path={`/${product1.name}`} component={Signup} /> )}  
         </div> 
     )
 };

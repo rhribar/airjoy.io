@@ -152,14 +152,27 @@ html {
 }
 
 .section-discover {
-  background-color: #fff;
-  padding-top: 2.5rem;
+  /* background-color: $color-white; */
+  padding-top: 5rem;
+  /* max-width: 192rem; */
 }
 
 .header-img {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../img/homepage.jpg");
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/homepage.jpg");
   background-size: cover;
+}
+
+.card-wrapper {
+  /* max-width: 100rem!important; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .product {
@@ -669,37 +682,87 @@ p {
 }
 
 .card {
-  border-radius: 1.5rem;
-  overflow: hidden;
-  font-size: 2rem;
-  height: 100%;
+  border: 0px solid #8b8b8b;
+  border-radius: 0rem;
+  position: relative;
+  height: 40rem;
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat', sans-serif !important;
+  cursor: pointer;
+  /* background-color:rgba(106, 200, 255, 0.1); */
+  /* &__container {
+        border-radius: 0rem;
+        overflow: hidden;
+        font-size: 2rem;
+    } */
+  /*    
+    &__body {
+        font-size: 2rem;
+    }
+
+    
+
+    &__price {
+        padding-left: 1rem;
+        font-size: 1.75rem;
+        color:red;
+    } */
 }
 
 .card__image {
-  border-radius: 2rem;
-  padding: 1rem;
-  height: 60%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  /*         & > * {
+            height: auto;
+            width: 20rem;
+        }  */
 }
 
 .card__header {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 2rem;
   padding-left: 1rem;
-}
-
-.card__body {
-  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1rem;
+  letter-spacing: 3px;
 }
 
 .card__description {
+  text-align: center;
+  margin-top: 1rem;
   padding-left: 1rem;
   font-size: 1.75rem;
+  color: #333;
 }
 
 .card__price {
   padding-left: 1rem;
-  font-size: 1.75rem;
-  color: red;
+  font-size: 2.5em;
+  color: #2998ff;
+  font-weight: 600;
+}
+
+.card__button {
+  background-color: #2998ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 1.3rem;
+  /*         width: 100%; */
+  padding: 1.5rem;
+  margin-bottom: 0;
+  left: 0;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
 }
 
 .form {

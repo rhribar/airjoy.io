@@ -32,10 +32,14 @@ const Card = ({
         }
     };
 
-    const getAredirect = redirect => {
+    const getAredirect = (redirect) => {
         if (redirect) {
-            return <Redirect to = "/cart" />;
+          console.log(redirect);
+            /* return <Redirect to=`/${product}` />; */
+            console.log(`/${product.product_url}`)
+            return <Redirect to={`/${product.product_url}`} />
         }
+        /* console.log(`/${product.product_url}`) */
     }
 
     const showAddToCart = addToCart => {
@@ -68,26 +72,28 @@ const Card = ({
         )
     }
 
+    const reactIsHard = () =>  {console.log("2")}
+
 
     return (
-      <div class="card">
-        <div className="card__body">
+      <div class="card" >
+        <div className="card__container">
           {getAredirect(redirect)}
           <ImageHelper product = {product}/>
           <div className="card__header">{cartTitle}</div>
-          <p class="card__description">
+          <p className="card__description">
             {cartDescription}
           </p>
-          <p class="card__price">$ {cartPrice}</p>
-          <div>
-          See details
+          <p className="card__price">$ {cartPrice}</p>
+          <div className="card__button" onClick={() => setRedirect(true)}>
+          {/* onClick={reactIsHard} */}
+            See Details</div>
             {/* <div className="col-12">
               {showAddToCart(addToCart)}
             </div>
             <div className="col-12">
              {showRemoveFromCart(removeFromCart)}
             </div> */}
-          </div>
         </div>
       </div>
     );
