@@ -19,4 +19,14 @@
     animation-timing-function: ease-out;
 
     text-shadow: 1rem 3rem 3rem rgba($color-black, .5);
+
+    &__secondary {
+        font-size:3rem;
+        display: flex;
+        justify-content: center;
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 400;
+        margin-bottom: 4rem;
+        margin-top: 1rem;
+    }
 }

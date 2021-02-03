@@ -2,10 +2,12 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    /* margin-left: 27.5%; */
+
     align-items: center;
     position: relative;
     /* margin-bottom: 15rem; */
-    padding-bottom: 10rem;
+    padding-bottom: 4rem;
     
     &__box {
         width: 60rem;
@@ -27,6 +29,7 @@
 
         outline: none;
         border: 0.5px solid #333344;
+        
 
         &::placeholder {
             color: $color-grey-dark-4;

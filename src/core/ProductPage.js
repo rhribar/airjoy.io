@@ -12,6 +12,7 @@ import "../static/sass/main.css";
 import locationFonts from '../static/icons/font/flaticon.css';
 import prices from '../static/img/kronplatz-prices.png';
 import soon from '../static/img/coming-soon.png'
+import Footer from './Footer'
 
 const ProductPage = ({
     product,
@@ -147,6 +148,7 @@ const ProductPage = ({
                 </div>
 
             </div>
+            <Footer></Footer>
          
             {products.map(product1 => <Route exact path={`/${product1.name}`}/> )}  
         </div> 

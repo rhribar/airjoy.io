@@ -36,7 +36,7 @@ const Navigation = ({history, path}) => {
                     <Link 
                         style={currentTab(history, "/discover")} 
                         className="navigation__link" 
-                        to  = "/"
+                        to  = "/discover"
                     >
                         Discover
                     </Link>
@@ -45,7 +45,7 @@ const Navigation = ({history, path}) => {
                     <Link 
                         style={currentTab(history, "/winter")} 
                         class="navigation__link" 
-                        to  = "/"
+                        to  = "/winter"
                     >
                         Winter
                     </Link>
@@ -54,7 +54,7 @@ const Navigation = ({history, path}) => {
                     <Link 
                         style={currentTab(history, "/summer")} 
                         class="navigation__link" 
-                        to  = "/"
+                        to  = "/summer"
                     >
                         Summer
                     </Link>

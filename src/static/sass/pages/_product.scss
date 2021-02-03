@@ -2,15 +2,24 @@
     font-size: 3rem;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-    padding: 3rem;
+    padding: 1.4rem;
+    padding-top: 0rem;
     z-index: 1000;
-    max-width: 192rem;
+    max-width: 142rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    /* background-color: orangered; */
 
     &__header {
-        height: 60vh;
+        height: 46vh;
+        /* background-image: linear-gradient(
+        to right,
+        rgba(#e7e7e7, 0.800),
+        rgba(#fbffff, 0.800)); */
+        /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+        /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
+        /* background-color: #e7e7e7; */
         background-image: linear-gradient(
         to right,
         rgba(#4facfe, 0.800),
@@ -19,9 +28,9 @@
         background-position: top;
         position: relative;
         /* font-size: 1.6rem; */
-        clip-path: polygon(0 0, 100% 0, 100% 53vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 42vh, 0 100%);
         z-index: -1000;
-        color:$color-white;
+        color:$color-text;
     }
 
     

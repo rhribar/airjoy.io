@@ -8,6 +8,9 @@ import ProductPage from "./core/ProductPage";
 import Signin from "./user/Signin";
 import Signup from "./user/Signup";
 import UserDashboard from "./user/UserDashboard";
+import Discover from "./core/Discover";
+import Winter from "./core/Winter";
+import Summer from "./core/Summer";
 
 //delete this
 import {useState, useEffect} from 'react';
@@ -51,6 +54,10 @@ const Routes = (
                 {products.map(product =>
                     <Route exact path={`/${product.product_url}`} component={ProductPage} />
                 )}  
+
+                <Route path = "/discover" exact component = {Discover} />
+                <Route path = "/winter" exact component = {Winter} />
+                <Route path = "/summer" exact component = {Summer} />
 
                 <Route path = "/cart" exact component= {Cart} />
                 <PrivateRoutes path = "/user/dashboard" exact component ={UserDashboard}/>
