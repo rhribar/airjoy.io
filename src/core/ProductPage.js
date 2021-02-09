@@ -14,12 +14,22 @@ import prices from '../static/img/kronplatz-prices.png';
 import soon from '../static/img/coming-soon.png'
 import Footer from './Footer'
 
+import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
+import { isAuthenticated } from '../auth/helper';
+import {Redirect} from "react-router-dom"
+import Weather from './Weather'
+
 const ProductPage = ({
     product,
+    addtoCart = true,
+    removeFromCart = false,
+    reload = undefined,
+    setReload = f => f,
 }) => {
     // loading all the products from api into state
     const [products, setProducts] = useState([]); 
     const [error, setError] = useState(false);
+    const [redirect, setRedirect] = useState(false);
     
     const loadAllProducts = () => {
         getProducts()
@@ -38,7 +48,7 @@ const ProductPage = ({
     var pageUrl = window.location.pathname;
     for(var i = 0; i < products.length; i++) {
         var productUrl = `/${products[i].product_url}`;
-        console.log(productUrl);
+        /* console.log(productUrl); */
         if(productUrl == pageUrl) {
             product = products[i];
         }
@@ -47,14 +57,92 @@ const ProductPage = ({
     useEffect(loadAllProducts, [] )
 
 
+    const addToCart = () => {
+        if(isAuthenticated()) {
+            addItemToCart(product, ()=> setRedirect(false))
+            console.log("Added to cart");
+        } else {
+            console.log("Login Please!");
+        }
+    };
+
+    const addToCartBuy = () => {
+        if(isAuthenticated()) {
+            addItemToCart(product, ()=> setRedirect(true))
+            console.log("Added to cart");
+        } else {
+            console.log("Login Please!");
+        }
+    };
+
+
+
+    const getAredirect = (redirect) => {
+        if (redirect) {
+          console.log(redirect);
+            /* return <Redirect to=`/${product}` />; */
+            /* console.log(`/${product.product_url}`) */
+            return <Redirect to={`/cart`} />
+        }
+        /* console.log(`/${product.product_url}`) */
+    }
+
+    const showAddToCart = addToCart => {
+        return(
+            addtoCart && (
+            <button
+              onClick={addToCart}
+              className="button navigation__buttons--blue button--page product__button--cart"
+            >
+              Add to Cart
+            </button>
+            )
+        )
+    }
+
+    const showBuyNow = addToCartBuy => {
+        return(
+            addtoCart && (
+            <button
+              onClick={addToCartBuy}
+              className="button navigation__buttons--blue button--page product__button--buy"
+            >
+              Buy Now
+            </button>
+            )
+        )
+    }
+
+
+
+    const showRemoveFromCart = removeFromCart => {
+        return(
+            removeFromCart && (
+            <button
+              onClick={() => {
+                  //TODO: handle this toos
+                  removeItemFromCart(product._id);
+                  setReload(!reload)
+                  console.log("Product removed from cart");
+              }}
+              className="btn btn-block btn-outline-danger mt-2 mb-2"
+            >
+              Remove from cart
+            </button>
+            )
+        )
+    }
+
+
+
     return (
         <div>
             <Navigation/>
             <div class="product">
                 <div class="product__header">
-                    {console.log(product)}
+                    {/* {console.log(product)} */}
                     <img src = {product.image} class= "product__image" alt={`${product.name} mountain`} />
-                    
+                    {/* {getAredirect(redirect)} */}
                     <div class="product__info">
                         <div class="product__heading">
                             <div class="product__heading--name">{product.name}</div>
@@ -80,25 +168,55 @@ const ProductPage = ({
                         <div class="product__text">{product.description_long}</div>
                         <div className="product__buy">
                             <div class="product__price">{product.price} EUR</div>
+                            
+                                {/* {showAddToCart(addToCart)}
+                                {showRemoveFromCart(removeFromCart)} */}
+                                
                             {/* <div class="product__snow">
                                 <div class="product__snow--mountain">{product.snow_mountain}</div>
                                 <div class="product__snow--valley">{product.snow_valley}</div>
                             </div> */}
-                            <div className="product__buttons">
+                            {/* <div className="product__buttons">
                                 <div className="signin__form__button">
                                     <button className="button navigation__buttons--blue button--page product__button--cart">Add To cart</button>
                                 </div>
                                 <div className="signin__form__button">
                                     <button className="button navigation__buttons--blue button--page product__button--buy">Buy Now</button>
                                 </div>
-                            </div>
+                            </div> */}
+
+                            
                         </div>
                     </div>
+                </div>
+                <div className="product__buttons">
+                    <div className="signin__form__button">
+                        {showAddToCart(addToCart)} 
+                    </div>
+                    <div className="signin__form__button">
+                        {showBuyNow(addToCartBuy)}
+                        {getAredirect(redirect)}
+                    </div>
+                    {/* <div className="signin__form__button">
+                        {showRemoveFromCart(removeFromCart)}
+                    </div> */}
                 </div>
                 
                 <div className="product__prices">
                     <h2 className="product__prices--heading">prices per season</h2>
                     <img src={prices} alt="Seasonal prices" className="product__prices--table"></img>
+                    {/* <div className="row">
+                        <div className="col-12">
+                            {showAddToCart(addToCart)} 
+                        </div>
+                        <div className="col-12">
+                            {showBuyNow(addToCart)}
+                            {getAredirect(redirect)}
+                        </div>
+                        <div className="col-12">
+                            {showRemoveFromCart(removeFromCart)}
+                        </div>
+                    </div> */}
                 </div>
 
                 <div className="product__description">
@@ -127,8 +245,13 @@ const ProductPage = ({
                 </div>
 
                 <div className="product__prices">
-                    <h2 className="product__prices--heading">weather</h2>
-                    
+                    <h2 className="product__prices--heading">Weather</h2>
+                    <div className="product__weather">
+                        <div>
+                        <Weather location = {product.location} ></Weather>
+                        {console.log(product.location)}
+                        </div>
+                    </div> 
                 </div>
 
                 <div className="product__description">

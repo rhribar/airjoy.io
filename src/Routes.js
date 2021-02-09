@@ -55,7 +55,8 @@ const Routes = (
                     <Route exact path={`/${product.product_url}`} component={ProductPage} />
                 )}  
 
-                <Route path = "/discover" exact component = {Discover} />
+                {/* <Route path = "/discover" exact component = {Discover} /> */}
+                <Route path = "/discover" render={(props) => <Discover {...props}/>} />
                 <Route path = "/winter" exact component = {Winter} />
                 <Route path = "/summer" exact component = {Summer} />
 

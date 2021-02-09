@@ -1,17 +1,36 @@
 .section-discover {
     /* background-color: $color-white; */
     padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: $color-light-blue;
     /* max-width: 192rem; */
     
 }
 
-.header-img {
-    background-image: linear-gradient(
+.section-header {
+
+    &--image {
+        background-image: linear-gradient(
         to right bottom,
-        rgba(#fff, 0.30),
-        rgba(#fff, 0.30)), 
-        url('../img/homepage.jpg');
-    background-size: cover;
+        rgba(#fff, 0.0),
+        rgba(#fff, 0.00)), 
+        url('../img/background1.png');
+        background-size: cover;
+        /* max-width: 200vh; */
+        /* max-height: 100rem; */
+        /* padding-bottom: 70rem; */
+        z-index: -100000;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: -15rem;
+        
+    }
+
+    &--search {
+        /* margin-top: -10rem; */
+        padding-bottom: 20rem;
+        margin-top: 10rem;
+    }
 }
 
 .card-wrapper {

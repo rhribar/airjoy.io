@@ -14,7 +14,7 @@ class CustomUser(AbstractUser):
 
     phone = models.CharField(max_length = 20, blank = True, null = True) # is optional
     gender = models.CharField(max_length = 10, blank = True, null = True)
-
+    
     session_token = models.CharField(max_length = 10, default = 0) #restricting the token to be max 10 char
     #session token for specific user for a specific session
 

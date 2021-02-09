@@ -24,6 +24,7 @@ const Card = ({
     
 
     const addToCart = () => {
+      
         if(isAuthenticated()) {
             addItemToCart(product, ()=> setRedirect(true))
             console.log("Added to cart");
@@ -92,8 +93,9 @@ const Card = ({
               {showAddToCart(addToCart)}
             </div>
             <div className="col-12">
-             {showRemoveFromCart(removeFromCart)}
+             
             </div> */}
+            {showRemoveFromCart(removeFromCart)}
         </div>
       </div>
     );

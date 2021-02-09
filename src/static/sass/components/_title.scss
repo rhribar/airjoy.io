@@ -1,5 +1,5 @@
 .title {
-    font-size: 5rem;
+    font-size: 6rem;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -10,15 +10,16 @@
     /* font-family: "Lato", sans-serif; */
     font-weight: 600;
     letter-spacing: 0.5rem;
-    color: $color-grey-dark-3;
+    color: $color-white;
     /* background-color:white; */
     /* !!!!!!!!!!!!!! */
 
     animation-name: moveInLeft;
     animation-duration: 1.0s;
     animation-timing-function: ease-out;
+    padding-top: 25rem;
 
-    text-shadow: 1rem 3rem 3rem rgba($color-black, .5);
+    text-shadow: 0.5rem 1rem 1rem rgba($color-black, .9);
 
     &__secondary {
         font-size:3rem;
@@ -29,4 +30,8 @@
         margin-bottom: 4rem;
         margin-top: 1rem;
     }
+
+    padding-top: 30rem;
+
+
 }

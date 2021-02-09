@@ -122,14 +122,26 @@ body {
 
 .heading-primary {
   color: #00EDF9;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: 3rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   text-align: center;
   letter-spacing: 3px;
-  -webkit-animation: moveInLeft 1.5s ease-out;
-          animation: moveInLeft 1.5s ease-out;
+  -webkit-animation: moveInLeft 1.0s ease-out;
+          animation: moveInLeft 1.0s ease-out;
+}
+
+.heading-secondary {
+  color: #333344;
+  /* text-transform: uppercase; */
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 3px;
+  -webkit-animation: moveInLeft 1.0s ease-out;
+          animation: moveInLeft 1.0s ease-out;
 }
 
 .u-center-text {
@@ -169,13 +181,28 @@ body {
 .section-discover {
   /* background-color: $color-white; */
   padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #F2FFFF;
   /* max-width: 192rem; */
 }
 
-.header-img {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../img/homepage.jpg");
-  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/homepage.jpg");
+.section-header--image {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url("../img/background1.png");
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("../img/background1.png");
   background-size: cover;
+  /* max-width: 200vh; */
+  /* max-height: 100rem; */
+  /* padding-bottom: 70rem; */
+  z-index: -100000;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -15rem;
+}
+
+.section-header--search {
+  /* margin-top: -10rem; */
+  padding-bottom: 20rem;
+  margin-top: 10rem;
 }
 
 .card-wrapper {
@@ -206,7 +233,7 @@ body {
 }
 
 .product__header {
-  height: 46vh;
+  height: 66vh;
   /* background-image: linear-gradient(
         to right,
         rgba(#e7e7e7, 0.800),
@@ -220,9 +247,9 @@ body {
   background-position: top;
   position: relative;
   /* font-size: 1.6rem; */
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 42vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 42vh, 0 100%);
-  z-index: -1000;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 62vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 62vh, 0 100%);
+  z-index: 10000;
   color: #333344;
 }
 
@@ -419,19 +446,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  /* flex-direction: row;
+        justify-content: center;
+        justify-content: space-between; */
+  /* align-items: center; */
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
 }
 
 .product__buy {
@@ -574,6 +595,11 @@ p {
 :global [class*=" icon-"]:before {
     font-size: 1670px;
 } */
+.space {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .signin {
   margin-top: 10rem;
   display: -webkit-box;
@@ -680,7 +706,7 @@ p {
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -694,7 +720,7 @@ p {
   /* font-family: "Lato", sans-serif; */
   font-weight: 600;
   letter-spacing: 0.5rem;
-  color: #333;
+  color: #fff;
   /* background-color:white; */
   /* !!!!!!!!!!!!!! */
   -webkit-animation-name: moveInLeft;
@@ -703,7 +729,9 @@ p {
           animation-duration: 1.0s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
-  text-shadow: 1rem 3rem 3rem rgba(0, 0, 0, 0.5);
+  padding-top: 25rem;
+  text-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.9);
+  padding-top: 30rem;
 }
 
 .title__secondary {
@@ -923,6 +951,11 @@ p {
   margin-bottom: 1rem;
 }
 
+.cardbig__button--remove {
+  background-color: #ff4800;
+  width: 15rem;
+}
+
 .cardbig__location {
   float: right;
   font-size: 1.5rem;
@@ -1106,7 +1139,8 @@ p {
   font-size: 1.5rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
+  /* margin-top: 5rem; */
   /* Change this  */
   /* position: fixed; */
   /* left: 0;
@@ -1229,7 +1263,8 @@ p {
   font-size: 1.5rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
+  /* margin-top: 5rem; */
   /* Change this  */
   /* position: fixed; */
   /* left: 0;
@@ -1314,7 +1349,7 @@ p {
   margin-right: auto;
   font-size: 1.8rem;
   font-weight: 500;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
   padding-top: 2.7rem;
   padding-bottom: 1.5rem;
 }
@@ -1373,6 +1408,11 @@ p {
   padding: 0.7rem  2.1rem 1.1rem 2.1rem;
   border-radius: 1rem;
   margin-right: 1.5rem;
+}
+
+.navigation__buttons--signout {
+  margin-top: -0.75rem;
+  padding: 0.7rem  2.1rem 1.1rem 2.1rem;
 }
 
 .navigation:hover, .navigation a:visited, .navigation a:link, .navigation a:active {

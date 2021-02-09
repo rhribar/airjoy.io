@@ -8,10 +8,15 @@ import {getProducts} from "./helper/coreapicalls";
 import { API } from "../backend.js";
 import axios from 'axios'
 
-export default function Discover() {
-
+const Discover = (
+  props
+) => {
+    /* console.log(search) */
     const [products, setProducts] = useState([]); 
     const [error, setError] = useState(false);
+
+    /* console.log(props.location.state.id); */
+    /* console.log(props.location.state.id.value); */
 
     const loadAllProducts = () => {
       getProducts()
@@ -26,8 +31,14 @@ export default function Discover() {
     };
 
     useEffect(loadAllProducts, [] )
+    let search;
+    if(typeof(props.location.state) === "undefined") {
+        search = "";
+    } else {
+        search = props.location.state.id;
+    }
 
-    const [searchTerm, setSearchTerm] = useState("");
+    const [searchTerm, setSearchTerm] = useState(search);
     const [searchResults, setSearchResults] = useState([]);
 
     const handleChange = event => {
@@ -63,3 +74,5 @@ export default function Discover() {
         </div>
     );
 }
+
+export default Discover;

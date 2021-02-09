@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8064a2fbf460ee8acb10ee5bbb3d3044",
+    "revision": "6bb984bf21bd471760939a8f3c4fe26f",
     "url": "/index.html"
   },
   {
-    "revision": "d3002dfd7e56889118ea",
-    "url": "/static/css/main.930640b9.chunk.css"
+    "revision": "26e2382fce0b0413b62e",
+    "url": "/static/css/main.f41dd401.chunk.css"
   },
   {
     "revision": "f06ca820e912067c9dad",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.01afb521.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d3002dfd7e56889118ea",
-    "url": "/static/js/main.54864ecf.chunk.js"
+    "revision": "26e2382fce0b0413b62e",
+    "url": "/static/js/main.f7403bc8.chunk.js"
   },
   {
     "revision": "72017dee5443dfc32ffd",
@@ -44,12 +44,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Flaticon.e089faa7.woff2"
   },
   {
-    "revision": "663ce55de4acef4fcbdd6252446944a6",
-    "url": "/static/media/coming-soon.663ce55d.png"
+    "revision": "df9907ba74e239018e829ae1db3c3a59",
+    "url": "/static/media/background1.df9907ba.png"
   },
   {
-    "revision": "75b3fbf41fcce50630527b8078dc0bd9",
-    "url": "/static/media/homepage.75b3fbf4.jpg"
+    "revision": "663ce55de4acef4fcbdd6252446944a6",
+    "url": "/static/media/coming-soon.663ce55d.png"
   },
   {
     "revision": "a8ca9c09e67db7e5e03f0e7b441d7631",

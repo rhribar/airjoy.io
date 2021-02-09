@@ -1,4 +1,4 @@
-import React, { useState } from "react"; //, useEffect
+import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import { cartEmpty } from "./helper/cartHelper";
 import { getmeToken, processPayment } from "./helper/paymentHelper";
@@ -39,12 +39,11 @@ const PaymentB = ({
           setInfo({ clientToken });
         }
       });
-      getToken(userId, token);
   };
-/*
+
   useEffect(() => {
     getToken(userId, token);
-  }, []);*/
+  }, []);
 
   const getAmount = () => {
     let amount = 0;
@@ -53,7 +52,6 @@ const PaymentB = ({
     });
     return amount;
   };
-   
   const onPurchase = () => {
     setInfo({ loading: true });
     let nonce;

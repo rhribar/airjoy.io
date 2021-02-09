@@ -97,6 +97,11 @@
         float: right;
         margin-right: 1rem;
         margin-bottom: 1rem;
+
+        &--remove {
+            background-color: rgb(255, 72, 0);
+            width: 15rem;
+        }
     }
     
     &__location {

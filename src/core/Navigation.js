@@ -91,7 +91,7 @@ const Navigation = ({history, path}) => {
                         </Fragment>
                     )}
                     {isAuthenticated() && (
-                        <li class="button button--blue">
+                        <li class="navigation__link navigation__buttons--blue navigation__buttons--signout">
                             <span 
                             onClick= {() => {
                                 signout(() => {

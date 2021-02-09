@@ -65,14 +65,14 @@ const Card = ({
                   setReload(!reload)
                   console.log("Product removed from cart");
               }}
-              className="btn btn-block btn-outline-danger mt-2 mb-2"
+              className="cardbig__button cardbig__button--remove"
             >
               Remove from cart
             </button>
             )
         )
     }
-
+    /* className="btn btn-block btn-outline-danger mt-2 mb-2" */
     const reactIsHard = () =>  {console.log("2")}
 
 
@@ -97,6 +97,7 @@ const Card = ({
               <div className="col-12">
               {showRemoveFromCart(removeFromCart)}
               </div> */}
+              {showRemoveFromCart(removeFromCart)}
           </div>
         </div>
       </div>

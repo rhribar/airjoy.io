@@ -12,7 +12,7 @@
     /* background-color: orangered; */
 
     &__header {
-        height: 46vh;
+        height: 66vh;
         /* background-image: linear-gradient(
         to right,
         rgba(#e7e7e7, 0.800),
@@ -28,8 +28,8 @@
         background-position: top;
         position: relative;
         /* font-size: 1.6rem; */
-        clip-path: polygon(0 0, 100% 0, 100% 42vh, 0 100%);
-        z-index: -1000;
+        clip-path: polygon(0 0, 100% 0, 100% 62vh, 0 100%);
+        z-index: 10000;
         color:$color-text;
     }
 
@@ -183,10 +183,11 @@
 
     &__buttons {
         display: flex;
-        flex-direction: row;
+        /* flex-direction: row;
         justify-content: center;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: space-between; */
+        /* align-items: center; */
+        justify-content: right;
         
     }
 
@@ -299,3 +300,8 @@ p {
 :global [class*=" icon-"]:before {
     font-size: 1670px;
 } */
+
+.space {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
