@@ -8,7 +8,10 @@ import Search from "./Search";
 
 import "../static/sass/main.css"
 /* import video from "../static/img/heading-video.mp4"; */
-/* import img from "../static/img/homepage.jpg"; */
+import img1 from "../static/img/winter_img.png";
+import img2 from "../static/img/summer_img.png";
+import img3 from "../static/img/teambuilding.png";
+
 import Footer from "./Footer.js"
 
 import Navigation from "./Navigation"
@@ -22,20 +25,9 @@ export default function Home() {
     const [redirect, setRedirect] = useState(false);
 
     /* let search = ""; */
-    let search;
 
     let handleChange = event => {
-      /* event.preventDefault(); */
-      /* e.stopPropagation();
-      e.nativeEvent.stopImmediatePropagation(); */
-      /* event.nativeEvent.stopImmediatePropagation() */
-      /* setSearchTerm(event.target.value); */
-      /* let search = event.target.value; */
-      /* console.log(event.target.value); */
-      /* setRedirect(true); */
       setSearchTerm(event.target.value)
-      /* search = event.target.value;
-      console.log(search); */
       console.log(searchTerm)
 
     };
@@ -45,13 +37,8 @@ export default function Home() {
     
     let handleSubmit = (e) => {
       e.preventDefault();
-      /* handleChange(e); */
-      /* console.log(search + "!"); */
-      /* console.log("1"); */
       setRedirect(true);
     };
-
-
 
 
     //onsubmit
@@ -84,6 +71,17 @@ export default function Home() {
 
     useEffect(loadAllProducts, [] )
 
+    const customRedirect = (path) => {
+        /* console.log(redirect); */
+          /* return <Redirect to=`/${product}` />; */
+          /* console.log(`/$`) */
+          console.log(1);
+          console.log(`/${path}`)
+      return <Redirect to={{
+        pathname: `/discover`,
+        }} />
+      /* console.log(`/${product.product_url}`) */
+    }
 
 
     // looping through products
@@ -107,13 +105,32 @@ export default function Home() {
       </div>
         
 
+          
+          <div className="section-activities">
+            <h1 className="heading-primary">Activites</h1>
+            <h2 className="heading-secondary">Check out our collection of activities!</h2>
+            <div class="smallcards-container">
+            <div class="smallcard">
+                <img src={img1} alt="winter" class="smallcard__image" onClick= {event =>  window.location.href='/winter'}/>
+                <div class="smallcard__text">Winter Activites</div>
+              </div>
+              <div class="smallcard">
+                <img src={img2} alt="summer" class="smallcard__image" onClick= {event =>  window.location.href='/summer'}/>
+                <div class="smallcard__text">Summer Activites</div>
+              </div>
+              <div class="smallcard">
+                <img src={img3} alt="teambuilding" class="smallcard__image" onClick= {event =>  window.location.href='/discover'}/>
+                <div class="smallcard__text">Teambuildings</div>
+              </div>
+            </div>
+          </div>
           <div className="section-discover">
             <h1 className="heading-primary">Discover</h1>
             <h2 className="heading-secondary">Discover new resorts, experiences and more!</h2>
-            <div className = "row card-wrapper">   
+            <div className = "card-wrapper">   
               {products.map((product, index) => {
                 return(
-                  <div key = {index} className = "col-1-of-3">
+                  <div key = {index}>
                     <Card product = {product}/>
                   </div>
                 );

@@ -80,12 +80,17 @@ const Card = ({
       <div class="card" >
         <div className="card__container">
           {getAredirect(redirect)}
-          <ImageHelper product = {product}/>
+          <div class="image__container">
+            <ImageHelper product = {product}/>
+          </div>
+          
+          <div class="card__location"><i class="flaticon-location card__location--icon"></i>{product.country}, {product.mountains}</div>
           <div className="card__header">{cartTitle}</div>
-          <p className="card__description">
+          <div className="card__price">$ {cartPrice}</div>
+          <div className="card__description">
             {cartDescription}
-          </p>
-          <p className="card__price">$ {cartPrice}</p>
+          </div>
+          
           <div className="card__button" onClick={() => setRedirect(true)}>
           {/* onClick={reactIsHard} */}
             See Details</div>

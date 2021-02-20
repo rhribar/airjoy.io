@@ -8,6 +8,10 @@
     letter-spacing: 3px;
     
     animation: moveInLeft 1.0s ease-out;
+
+    @media only screen and (max-width: 1200px) {
+        margin: 0;
+    }
 }
 
 .heading-secondary {
@@ -20,4 +24,9 @@
     letter-spacing: 3px;
     
     animation: moveInLeft 1.0s ease-out;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 2rem;
+        margin: 1.5rem;
+    }
 }
