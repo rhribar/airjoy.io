@@ -17,6 +17,7 @@ class Search extends Component {
                     onChange={this.props.onChange}
                     
                     />
+                    <i class="fas fa-search search__icon"></i>
                 </form> 
             </div>
         ) 

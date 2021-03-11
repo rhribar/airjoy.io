@@ -48,9 +48,10 @@
 .card-wrapper {
     /* max-width: 100rem!important; */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 
     justify-content: space-evenly;
+    flex-direction: row-reverse;
 
     @media only screen and (max-width: 1550px) {
         flex-direction: column;

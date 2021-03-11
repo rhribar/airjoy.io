@@ -95,6 +95,7 @@ export default function Home() {
       <div className="section-header--image">
       {/* <Base title = "Enjoy your day. We provide the fun!" description = "" className="title"></Base> */}
       <div className="title">Enjoy your day. We provide the fun!</div>
+      {/* Find relevant information about your favorite ski resort! */}
       <div className="section-header--search">
       {/* <Search></Search> */}
       <Search value={searchTerm} onChange={handleChange} onSubmit={handleSubmit}/>
@@ -126,6 +127,7 @@ export default function Home() {
           </div>
           <div className="section-discover">
             <h1 className="heading-primary">Discover</h1>
+            {/* <h2 className="heading-secondary">Find relevant information about your favorite ski resort!</h2> */}
             <h2 className="heading-secondary">Discover new resorts, experiences and more!</h2>
             <div className = "card-wrapper">   
               {products.map((product, index) => {
