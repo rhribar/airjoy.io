@@ -169,27 +169,20 @@ const ProductPage = ({
                         <div className="product__buy">
                             <div class="product__price">{product.price} EUR</div>
                             
-                                {/* {showAddToCart(addToCart)}
-                                {showRemoveFromCart(removeFromCart)} */}
-                                
-                            {/* <div class="product__snow">
-                                <div class="product__snow--mountain">{product.snow_mountain}</div>
-                                <div class="product__snow--valley">{product.snow_valley}</div>
-                            </div> */}
-                            {/* <div className="product__buttons">
+                            <div className="product__buttons">
                                 <div className="signin__form__button">
-                                    <button className="button navigation__buttons--blue button--page product__button--cart">Add To cart</button>
+                                    {showAddToCart(addToCart)} 
                                 </div>
                                 <div className="signin__form__button">
-                                    <button className="button navigation__buttons--blue button--page product__button--buy">Buy Now</button>
+                                    {showBuyNow(addToCartBuy)}
+                                    {getAredirect(redirect)}
                                 </div>
-                            </div> */}
-
+                            </div>
                             
                         </div>
                     </div>
                 </div>
-                <div className="product__buttons">
+                {/* <div className="product__buttons">
                     <div className="signin__form__button">
                         {showAddToCart(addToCart)} 
                     </div>
@@ -197,10 +190,7 @@ const ProductPage = ({
                         {showBuyNow(addToCartBuy)}
                         {getAredirect(redirect)}
                     </div>
-                    {/* <div className="signin__form__button">
-                        {showRemoveFromCart(removeFromCart)}
-                    </div> */}
-                </div>
+                </div> */}
                 
                 <div className="product__prices">
                     <h2 className="product__prices--heading">prices per season</h2>
@@ -225,22 +215,19 @@ const ProductPage = ({
                         <div className="product__description--title">Accessbility</div>
                         <div className="product__description--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </div>
                     </div>
                     <div className="product__description--block">
                         <div className="product__description--title">Food / Drink</div>
                         <div className="product__description--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </div>
                     </div>
                     <div className="product__description--block">
                         <div className="product__description--title">Offpiste</div>
                         <div className="product__description--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </div>
                     </div>                     
                 </div>
 

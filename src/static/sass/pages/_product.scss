@@ -1,25 +1,20 @@
 .product {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     padding: 1.4rem;
     padding-top: 0rem;
     z-index: 1000;
-    max-width: 142rem;
+    max-width: 150rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
     /* background-color: orangered; */
+    // TODO: USE FLEXBOX
 
     &__header {
-        height: 66vh;
-        /* background-image: linear-gradient(
-        to right,
-        rgba(#e7e7e7, 0.800),
-        rgba(#fbffff, 0.800)); */
-        /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
-        /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
-        /* background-color: #e7e7e7; */
+        /* height: 66vh; */
+        height: 65rem;
         background-image: linear-gradient(
         to right,
         rgba(#4facfe, 0.800),
@@ -28,9 +23,10 @@
         background-position: top;
         position: relative;
         /* font-size: 1.6rem; */
-        clip-path: polygon(0 0, 100% 0, 100% 62vh, 0 100%);
+        /* clip-path: polygon(0 0, 100% 0, 100% 62vh, 0 100%); */
         z-index: 10000;
         color:$color-text;
+        /* color: white; */
     }
 
     
@@ -171,13 +167,13 @@
     &__button {
         &--buy {
             background-color: #4facfe!important;
-            width: 20rem!important;
-            margin-left: 2rem; 
+            /* width: 20rem!important; */
+            margin-left: 1rem; 
         }
     
         &--cart {
             background-color: #4facfe!important;
-            width: 20rem!important;
+            /* width: 20rem!important; */
         }
     }
 
@@ -201,10 +197,19 @@
     }
 
     &__prices {
+        height: 65rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-width: 120rem;
+        /* max-width: 150rem; */
+
         &--heading {
             text-transform: uppercase;
-            display:flex;
+            /* display:flex;
             justify-content: center;
+            align-items: center; */
             color: $color-primary-dark;
             font-weight: 600;
             font-size:4rem;
@@ -214,15 +219,14 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 80vh;
+            /* width: 100rem; */
             margin-top: 2rem;
-            
-            /* padding-left: 2rem; */
+            height: 45rem;
         }
     }
 
     &__description {
-        height: 60vh;
+        height: 65rem;
         background-image: linear-gradient(
         to right,
         rgba(#4facfe, 0.800),
@@ -231,7 +235,7 @@
         background-position: top;
         position: relative;
         /* font-size: 1.6rem; */
-        clip-path: polygon(0 7vh, 100% 0, 100% 53vh, 0 100%);
+        /* clip-path: polygon(0 7vh, 100% 0, 100% 53vh, 0 100%); */
         z-index: -1000; 
         color: $color-white;
         
@@ -257,6 +261,7 @@
             font-weight: 300;
             margin: 0 10rem 0 5rem;
             min-width: 20rem;
+            font-size: 3rem;
         }
         &--text {
             font-weight: 400;
